@@ -10,12 +10,12 @@ end
 local SilentAimSettings = {
     Enabled = true,
     
-    ClassName = "RAHHHH",
+    ClassName = "RAHHHHH",
     ToggleKey = "RightAlt",
     
     TeamCheck = false,
     VisibleCheck = false, 
-    TargetPart = "Random",
+    TargetPart = "Random
     SilentAimMethod = "Raycast",
     
     FOVRadius = 130,
@@ -66,13 +66,15 @@ mouse_box.Thickness = 20
 mouse_box.Size = Vector2.new(20, 20)
 mouse_box.Filled = true 
 
-FOVManagement:AddToggle("AimingFOVVisible", {
-        Text = "Visible",
-        Default = AimingSettingsFOVSettings.Visible,
-        Tooltip = "Toggle the FOV circle's visibility",
-        Callback = function(Value)
-            AimingSettingsFOVSettings.Visible = Value
-        end
+local fov_circle = Drawing.new("Circle")
+fov_circle.Thickness = 1
+fov_circle.NumSides = 100
+fov_circle.Radius = 180
+fov_circle.Filled = false
+fov_circle.Visible = false
+fov_circle.ZIndex = 999
+fov_circle.Transparency = 1
+fov_circle.Color = Color3.fromRGB(54, 57, 241)
 
 local ExpectedArguments = {
     FindPartOnRayWithIgnoreList = {
