@@ -31,11 +31,11 @@ repeat wait() until plr.Character and plr.Character:FindFirstChild("HumanoidRoot
 
 local Settings = {
     Camlock = false,
-    Enabled = true,
+    Enabled = false,
     Method = "",
     TeamCheck = false,
     TargetPart = "Head",
-    HitChance = 75, 
+    HitChance = 100, 
     Smoothing = 50,
     Bot = false,
     Botmethod = "Tween",
@@ -51,8 +51,8 @@ local Settings = {
     FlyMethod = "CFrame",
 
     --Visuals
-    FovRadius = 30,
-    FovVisable = true,
+    FovRadius = 100,
+    FovVisable = false,
     FovTransparency = 0.5,
     FovTracers = false,
     FovColor = Color3.new(255, 255, 255),
